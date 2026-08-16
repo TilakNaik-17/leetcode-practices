@@ -21,21 +21,23 @@ for(int i=k;i<s.length();i++){
     if(isVowel(s.charAt(i-k))){
         count--;
     }
+    max=Math.max(max, count);
+
 }
-max=Math.max(max, count);
 return max;
 
 
     }
 
+
     private boolean isVowel(char c ) {
         return c=='a'|| c=='e'||c=='i'||c=='o'||c=='u';
     }
-}
+
 
 public static void main(String args[]){
     Scanner sc=new Scanner(System.in);
-    System.out.println("enter the total no. of charcter");
+    System.out.println("enter the string");
     String s=sc.next();
     System.out.println("enter k");
 
@@ -44,4 +46,5 @@ public static void main(String args[]){
     System.out.println("this string contains "+sn.maxvowel(s,k));
 
     sc.close();
+}
 }
